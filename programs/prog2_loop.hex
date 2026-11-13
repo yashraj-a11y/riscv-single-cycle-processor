@@ -1,0 +1,16 @@
+// prog2_loop.hex - machine code for prog2_loop.s (hand-assembled)
+// one 32-bit instruction per line, address = line index * 4
+00500093   // 00: addi x1, x0, 5
+00000113   // 04: addi x2, x0, 0
+00110133   // 08: add  x2, x2, x1      <- loop
+fff08093   // 0c: addi x1, x1, -1
+fe009ce3   // 10: bne  x1, x0, -8      (back to loop)
+00208463   // 14: beq  x1, x2, +8      (not taken)
+00700393   // 18: addi x7, x0, 7
+00202023   // 1c: sw   x2, 0(x0)
+00002203   // 20: lw   x4, 0(x0)
+00f00293   // 24: addi x5, x0, 15
+00100313   // 28: addi x6, x0, 1
+00520463   // 2c: beq  x4, x5, +8      (taken, skips next line)
+fff00313   // 30: addi x6, x0, -1
+00000063   // 34: beq  x0, x0, 0       (halt: branch to itself)
