@@ -9,7 +9,7 @@ TB  = tb
 
 .PHONY: all clean fetch control_unit reg_file imm_gen alu top top2
 
-all: fetch control_unit reg_file imm_gen
+all: fetch control_unit reg_file imm_gen alu
 
 # ---------- Member 1: fetch stage ----------
 fetch:
@@ -35,11 +35,11 @@ control_unit:
 	    $(RTL)/control_unit.v $(RTL)/mux2.v $(TB)/tb_control_unit.v
 	cd $(TB) && $(VVP) tb_control_unit.vvp
 
-# ---------- Member 3: ALU (placeholder, files not yet added) ----------
-# alu:
-#	$(IV) -o $(TB)/tb_alu.vvp \
-#	    $(RTL)/alu.v $(RTL)/alu_control.v $(TB)/tb_alu.v
-#	cd $(TB) && $(VVP) tb_alu.vvp
+# ---------- Member 3: ALU ----------
+alu:
+	$(IV) -o $(TB)/tb_alu.vvp \
+	    $(RTL)/alu.v $(RTL)/alu_control.v $(TB)/tb_alu.v
+	cd $(TB) && $(VVP) tb_alu.vvp
 
 # ---------- Member 5: full processor (placeholder) ----------
 # top:
