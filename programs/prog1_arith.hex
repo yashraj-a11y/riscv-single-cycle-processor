@@ -1,0 +1,17 @@
+// prog1_arith.hex - machine code for prog1_arith.s (hand-assembled)
+// one 32-bit instruction per line, address = line index * 4
+00a00093   // 00: addi x1,  x0, 10
+00600113   // 04: addi x2,  x0, 6
+002081b3   // 08: add  x3,  x1, x2
+40208233   // 0c: sub  x4,  x1, x2
+0020f2b3   // 10: and  x5,  x1, x2
+0020e333   // 14: or   x6,  x1, x2
+0020c3b3   // 18: xor  x7,  x1, x2
+ffd00413   // 1c: addi x8,  x0, -3
+00302023   // 20: sw   x3,  0(x0)
+00402223   // 24: sw   x4,  4(x0)
+00002483   // 28: lw   x9,  0(x0)
+00402503   // 2c: lw   x10, 4(x0)
+00a485b3   // 30: add  x11, x9, x10
+00b02423   // 34: sw   x11, 8(x0)
+00000063   // 38: beq  x0,  x0, 0     (halt: branch to itself)
