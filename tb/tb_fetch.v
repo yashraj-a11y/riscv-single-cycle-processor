@@ -60,9 +60,13 @@ module tb_fetch;
         reset = 1;
         @(posedge clk); #1; check(32'h00, 32'h00a00093);
 
-        if (errors == 0) $display("tb_fetch: ALL TESTS PASSED");
-        else             $display("tb_fetch: %0d TEST(S) FAILED", errors);
-        $finish;
+        if (errors == 0) begin
+            $display("tb_fetch: ALL TESTS PASSED");
+            $finish;
+        end else begin
+            $display("tb_fetch: %0d TEST(S) FAILED", errors);
+            $fatal(1);
+        end
     end
 
 endmodule
