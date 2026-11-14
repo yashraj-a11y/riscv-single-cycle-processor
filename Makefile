@@ -1,54 +1,49 @@
-# Makefile for the RV32I single-cycle processor
-# Each target compiles the relevant RTL + testbench with Icarus Verilog,
-# runs the simulation, and prints PASS / FAIL.
+# Run from the repository root.  Needs Icarus Verilog (iverilog + vvp).
+#
+#   make            run every testbench
+#   make top        run the full processor on program 1
+#   make top2       run the full processor on program 2
+#   make alu        run a single unit testbench (same for the others)
+#   make clean      delete build output and waveforms
 
-IV  = iverilog
-VVP = vvp
-RTL = rtl
-TB  = tb
+RTL := $(wildcard rtl/*.v)
+IV  := iverilog -g2005 -Wall
 
-.PHONY: all clean fetch control_unit reg_file imm_gen alu top top2
+.PHONY: all fetch reg_file imm_gen alu control_unit data_mem top top2 clean
 
-all: fetch control_unit reg_file imm_gen alu
+all: fetch reg_file imm_gen alu control_unit data_mem top top2
 
-# ---------- Member 1: fetch stage ----------
 fetch:
-	$(IV) -o $(TB)/tb_fetch.vvp \
-	    $(RTL)/pc.v $(RTL)/adder.v $(RTL)/instr_mem.v $(TB)/tb_fetch.v
-	cd $(TB) && $(VVP) tb_fetch.vvp
+	$(IV) -o build_fetch.out rtl/pc.v rtl/adder.v rtl/instr_mem.v tb/tb_fetch.v
+	vvp build_fetch.out
 
-# ---------- Member 2: register file ----------
 reg_file:
-	$(IV) -o $(TB)/tb_reg_file.vvp \
-	    $(RTL)/reg_file.v $(TB)/tb_reg_file.v
-	cd $(TB) && $(VVP) tb_reg_file.vvp
+	$(IV) -o build_reg_file.out rtl/reg_file.v tb/tb_reg_file.v
+	vvp build_reg_file.out
 
-# ---------- Member 2: immediate generator ----------
 imm_gen:
-	$(IV) -o $(TB)/tb_imm_gen.vvp \
-	    $(RTL)/imm_gen.v $(TB)/tb_imm_gen.v
-	cd $(TB) && $(VVP) tb_imm_gen.vvp
+	$(IV) -o build_imm_gen.out rtl/imm_gen.v tb/tb_imm_gen.v
+	vvp build_imm_gen.out
 
-# ---------- Member 4: control unit ----------
-control_unit:
-	$(IV) -o $(TB)/tb_control_unit.vvp \
-	    $(RTL)/control_unit.v $(RTL)/mux2.v $(TB)/tb_control_unit.v
-	cd $(TB) && $(VVP) tb_control_unit.vvp
-
-# ---------- Member 3: ALU ----------
 alu:
-	$(IV) -o $(TB)/tb_alu.vvp \
-	    $(RTL)/alu.v $(RTL)/alu_control.v $(TB)/tb_alu.v
-	cd $(TB) && $(VVP) tb_alu.vvp
+	$(IV) -o build_alu.out rtl/alu.v rtl/alu_control.v tb/tb_alu.v
+	vvp build_alu.out
 
-# ---------- Member 5: full processor (placeholder) ----------
-# top:
-#	$(IV) -o $(TB)/tb_rv32i_top.vvp \
-#	    $(RTL)/pc.v $(RTL)/adder.v $(RTL)/instr_mem.v $(RTL)/reg_file.v \
-#	    $(RTL)/imm_gen.v $(RTL)/alu.v $(RTL)/alu_control.v \
-#	    $(RTL)/control_unit.v $(RTL)/mux2.v $(RTL)/data_mem.v \
-#	    $(RTL)/rv32i_top.v $(TB)/tb_rv32i_top.v
-#	cd $(TB) && $(VVP) tb_rv32i_top.vvp
+control_unit:
+	$(IV) -o build_control_unit.out rtl/control_unit.v rtl/mux2.v tb/tb_control_unit.v
+	vvp build_control_unit.out
+
+data_mem:
+	$(IV) -o build_data_mem.out rtl/data_mem.v tb/tb_data_mem.v
+	vvp build_data_mem.out
+
+top:
+	$(IV) -o build_top.out $(RTL) tb/tb_rv32i_top.v
+	vvp build_top.out
+
+top2:
+	$(IV) -DPROG2 -o build_top2.out $(RTL) tb/tb_rv32i_top.v
+	vvp build_top2.out
 
 clean:
-	rm -f $(TB)/*.vvp $(TB)/*.vcd
+	rm -f *.out *.vcd
