@@ -4,7 +4,7 @@ CSA-222 Modern Computer Architecture, Project 1. A small single-cycle RISC-V pro
 
 `ADD` `SUB` `AND` `OR` `XOR` `ADDI` `LW` `SW` `BEQ` `BNE`
 
-**Team:** Rishi Raj (2401010380), Yash Yadav (2401010514), Aditya Samadhiya (2401010037), Kaustubh Mishra (2401020116), Yash Raj (2401010514)
+**Team:** Rishi Raj (2401010380), Yash Yadav (2401010514), Aditya Samadhiya (2401010037), Kaustubh Ranjan Mishra (2401020116), Yash Raj (2401010514)
 
 **Phase I report:** [docs/report_phase1.pdf](docs/report_phase1.pdf)
 
@@ -95,5 +95,5 @@ Programs are assembled by hand. Each line of a `.hex` file has the assembly next
 | Rishi Raj (2401010380) | `pc`, `adder`, `instr_mem`, `tb_fetch`, both test programs | Abstract, Introduction |
 | Yash Yadav (2401010514) | `reg_file`, `imm_gen`, `tb_reg_file`, `tb_imm_gen` | Literature Review |
 | Aditya Samadhiya (2401010037) | `alu`, `alu_control`, `tb_alu` | Instruction subset, Datapath, block diagram |
-| Kaustubh Mishra (2401020116) | `control_unit`, `mux2`, `tb_control_unit` | Control section and truth table |
+| Kaustubh Ranjan Mishra (2401020116) | `control_unit`, `mux2`, `tb_control_unit` | Control section and truth table |
 | Yash Raj (2401010514) | `data_mem`, `rv32i_top`, `tb_data_mem`, `tb_rv32i_top`, Makefile | Verification section, repo, video editing |

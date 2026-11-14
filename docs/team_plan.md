@@ -2,7 +2,7 @@
 
 Five roughly equal slices. Each person owns some RTL, the testbench for it, a part of the report and about a minute of the video. Everyone should be able to explain their own modules in the Phase II interview, so read your files line by line before you commit them.
 
-| | Rishi Raj: Fetch | Yash Yadav: Decode data | Aditya Samadhiya: Execute | Kaustubh Mishra: Control | Yash Raj: Memory + integration |
+| | Rishi Raj: Fetch | Yash Yadav: Decode data | Aditya Samadhiya: Execute | Kaustubh Ranjan Mishra: Control | Yash Raj: Memory + integration |
 |---|---|---|---|---|---|
 | RTL | `pc.v`, `adder.v`, `instr_mem.v` | `reg_file.v`, `imm_gen.v` | `alu.v`, `alu_control.v` | `control_unit.v`, `mux2.v` | `data_mem.v`, `rv32i_top.v` |
 | Testbench | `tb_fetch.v` | `tb_reg_file.v`, `tb_imm_gen.v` | `tb_alu.v` | `tb_control_unit.v` | `tb_data_mem.v`, `tb_rv32i_top.v` |
@@ -16,11 +16,11 @@ Phase II looks at version history and individual contributions, so each person s
 
 A sensible order, since later pieces depend on earlier ones:
 
-1. Member 5 creates the repo with `README.md`, `.gitignore`, `Makefile` and the empty folder layout, and adds everyone as collaborators.
-2. Members 1 to 4 each push their RTL and testbench (one commit per module is fine). Run your own testbench first and check it prints `ALL TESTS PASSED`.
-3. Member 1 pushes the test programs.
-4. Member 5 pushes `data_mem.v`, then `rv32i_top.v` and `tb_rv32i_top.v` once the other modules are in.
-5. Member 3 pushes the block diagram; everyone pushes their section of the report source; Member 5 adds the built PDF and the video link.
+1. Yash Raj creates the repo with `README.md`, `.gitignore`, `Makefile` and the empty folder layout, and adds everyone as collaborators.
+2. Rishi Raj, Yash Yadav, Aditya Samadhiya, and Kaustubh Ranjan Mishra each push their RTL and testbench (one commit per module is fine). Run your own testbench first and check it prints `ALL TESTS PASSED`.
+3. Rishi Raj pushes the test programs.
+4. Yash Raj pushes `data_mem.v`, then `rv32i_top.v` and `tb_rv32i_top.v` once the other modules are in.
+5. Aditya Samadhiya pushes the block diagram; everyone pushes their section of the report source; Yash Raj adds the built PDF and the video link.
 
 Use clear commit messages, for example `Add ALU with zero flag` or `Add register file testbench`.
 

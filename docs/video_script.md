@@ -6,39 +6,39 @@ Before recording, have these open: the block diagram (`docs/datapath.png`), an e
 
 ---
 
-## 0:00 to 0:50, Member 1: idea, team, fetch
+## 0:00 to 0:50, Rishi Raj: idea, team, fetch
 
 **Show:** title slide with project name and five names, then the block diagram.
 
-> "This is Project 1, a single-cycle RV32I processor in Verilog. We are [five names]. I'm [name]. Our processor runs ten RISC-V instructions: ADD, SUB, AND, OR, XOR, ADDI, load word, store word, BEQ and BNE. Single-cycle means each instruction is fetched, decoded and executed in one clock cycle."
+> "This is Project 1, a single-cycle RV32I processor in Verilog. We are Rishi Raj, Yash Yadav, Aditya Samadhiya, Kaustubh Ranjan Mishra, and Yash Raj. I'm Rishi Raj. Our processor runs ten RISC-V instructions: ADD, SUB, AND, OR, XOR, ADDI, load word, store word, BEQ and BNE. Single-cycle means each instruction is fetched, decoded and executed in one clock cycle."
 
 **Show:** left side of the diagram, then `pc.v` and `instr_mem.v`.
 
 > "I built the fetch stage. The program counter holds the address of the current instruction. Instruction memory is a ROM loaded from a hex file, and an adder computes PC plus 4. I also wrote the two test programs and assembled them into hex by hand."
 
-## 0:50 to 1:40, Member 2: register file and immediate generator
+## 0:50 to 1:40, Yash Yadav: register file and immediate generator
 
 **Show:** `reg_file.v`, then `imm_gen.v`, then run `make reg_file` and `make imm_gen`.
 
-> "I'm [name]. The register file has 32 registers of 32 bits, two read ports and one write port. Register x0 always reads zero, as RISC-V requires. The immediate generator pulls the constant out of the instruction and sign-extends it. The bits sit in different places for I, S and B type instructions, so it switches on the opcode. Both testbenches pass, including negative immediates."
+> "I'm Yash Yadav. The register file has 32 registers of 32 bits, two read ports and one write port. Register x0 always reads zero, as RISC-V requires. The immediate generator pulls the constant out of the instruction and sign-extends it. The bits sit in different places for I, S and B type instructions, so it switches on the opcode. Both testbenches pass, including negative immediates."
 
-## 1:40 to 2:30, Member 3: ALU
+## 1:40 to 2:30, Aditya Samadhiya: ALU
 
 **Show:** ALU on the diagram, `alu.v`, `alu_control.v`, then `make alu`.
 
-> "I'm [name]. The ALU does add, subtract, AND, OR and XOR, and gives a zero flag that the branches use. A small ALU control block picks the operation from funct3 and one bit of funct7. ADD and SUB differ only in that bit. For ADDI that bit is part of the immediate, so we only subtract when the instruction is R-type. The testbench checks every operation and every instruction's decode."
+> "I'm Aditya Samadhiya. The ALU does add, subtract, AND, OR and XOR, and gives a zero flag that the branches use. A small ALU control block picks the operation from funct3 and one bit of funct7. ADD and SUB differ only in that bit. For ADDI that bit is part of the immediate, so we only subtract when the instruction is R-type. The testbench checks every operation and every instruction's decode."
 
-## 2:30 to 3:20, Member 4: control unit
+## 2:30 to 3:20, Kaustubh Ranjan Mishra: control unit
 
 **Show:** control truth table from the report, `control_unit.v`, then `make control_unit`.
 
-> "I'm [name]. The control unit reads the 7-bit opcode and sets six signals: whether to write a register, whether the ALU takes an immediate, whether to write memory, what to write back, whether this is a branch, and the ALU operation class. For a branch, the ALU subtracts the two registers; BEQ jumps if zero is 1 and BNE if zero is 0. Unknown opcodes turn all write enables off, so they can't change any state."
+> "I'm Kaustubh Ranjan Mishra. The control unit reads the 7-bit opcode and sets six signals: whether to write a register, whether the ALU takes an immediate, whether to write memory, what to write back, whether this is a branch, and the ALU operation class. For a branch, the ALU subtracts the two registers; BEQ jumps if zero is 1 and BNE if zero is 0. Unknown opcodes turn all write enables off, so they can't change any state."
 
-## 3:20 to 4:30, Member 5: integration, full run, wrap-up
+## 3:20 to 4:30, Yash Raj: integration, full run, wrap-up
 
 **Show:** `rv32i_top.v` briefly, then run `make top` and `make top2` in the terminal.
 
-> "I'm [name]. I built the data memory and connected all modules in the top level. Here is program 1 running. Each line is one clock cycle: the PC, the instruction, and the ALU result. At the end the testbench compares registers and memory with the values we worked out by hand, and everything passes. Program 2 sums 5 down to 1 with a loop. You can see the PC jump back to address 8 five times, and the final sum 15 is stored to memory and read back."
+> "I'm Yash Raj. I built the data memory and connected all modules in the top level. Here is program 1 running. Each line is one clock cycle: the PC, the instruction, and the ALU result. At the end the testbench compares registers and memory with the values we worked out by hand, and everything passes. Program 2 sums 5 down to 1 with a loop. You can see the PC jump back to address 8 five times, and the final sum 15 is stored to memory and read back."
 
 **Show:** GTKWave. Point at `dbg_pc` going 08, 0c, 10, 08 in program 2 and `pc_src` going high on the taken branch.
 
