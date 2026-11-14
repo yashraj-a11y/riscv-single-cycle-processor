@@ -2,7 +2,7 @@
 
 Five roughly equal slices. Each person owns some RTL, the testbench for it, a part of the report and about a minute of the video. Everyone should be able to explain their own modules in the Phase II interview, so read your files line by line before you commit them.
 
-| | Member 1: Fetch | Member 2: Decode data | Member 3: Execute | Member 4: Control | Member 5: Memory + integration |
+| | Rishi Raj: Fetch | Yash Yadav: Decode data | Aditya Samadhiya: Execute | Kaustubh Mishra: Control | Yash Raj: Memory + integration |
 |---|---|---|---|---|---|
 | RTL | `pc.v`, `adder.v`, `instr_mem.v` | `reg_file.v`, `imm_gen.v` | `alu.v`, `alu_control.v` | `control_unit.v`, `mux2.v` | `data_mem.v`, `rv32i_top.v` |
 | Testbench | `tb_fetch.v` | `tb_reg_file.v`, `tb_imm_gen.v` | `tb_alu.v` | `tb_control_unit.v` | `tb_data_mem.v`, `tb_rv32i_top.v` |
