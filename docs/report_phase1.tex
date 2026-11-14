@@ -12,8 +12,8 @@
 \title{Design and Verification of a Single-Cycle RV32I Processor in Verilog\\
 {\large Phase I Report --- CSA-222 Modern Computer Architecture}}
 
-% TODO: replace with real names and roll numbers
-\author{\IEEEauthorblockN{Member 1, Member 2, Member 3, Member 4 and Member 5}
+\author{\IEEEauthorblockN{Rishi Raj (2401010380), Yash Yadav (2401010514), Aditya Samadhiya (2401010037),\\
+Kaustubh Mishra (2401020116) and Yash Raj (2401010514)}
 \IEEEauthorblockA{B.Tech Computer Science and AI, Batch 2024\\
 Newton School of Technology, Rishihood University\\
 Sonipat, Haryana, India}}
@@ -299,23 +299,24 @@ video. Table~\ref{tab:contrib} lists the split.
 \caption{Individual contributions in Phase I}
 \label{tab:contrib}
 \centering
-\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{2.5cm}@{}}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{2.3cm}>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{2.3cm}@{}}
 \toprule
 Member & RTL and verification & Report and other \\
 \midrule
-Member 1 & \texttt{pc}, \texttt{adder}, \texttt{instr\_mem}, \texttt{tb\_fetch};
+Rishi Raj\newline(2401010380) & \texttt{pc}, \texttt{adder}, \texttt{instr\_mem}, \texttt{tb\_fetch};
            both test programs, hand-assembled & Abstract, Introduction \\
 \addlinespace
-Member 2 & \texttt{reg\_file}, \texttt{imm\_gen} and their two testbenches &
+Yash Yadav\newline(2401010514) & \texttt{reg\_file}, \texttt{imm\_gen} and their two testbenches &
            Literature Review \\
 \addlinespace
-Member 3 & \texttt{alu}, \texttt{alu\_control}, \texttt{tb\_alu} &
+Aditya Samadhiya\newline(2401010037) & \texttt{alu}, \texttt{alu\_control}, \texttt{tb\_alu} &
            Instruction subset, Datapath, block diagram \\
 \addlinespace
-Member 4 & \texttt{control\_unit}, \texttt{mux2}, \texttt{tb\_control\_unit} &
+Kaustubh Mishra\newline(2401020116) & \texttt{control\_unit}, \texttt{mux2}, \texttt{tb\_control\_unit} &
            Control section and truth table \\
 \addlinespace
-Member 5 & \texttt{data\_mem}, \texttt{rv32i\_top} integration,
+Yash Raj\newline(2401010514) & \texttt{data\_mem}, \texttt{rv32i\_top} integration,
            \texttt{tb\_data\_mem}, \texttt{tb\_rv32i\_top} &
            Verification section, repository, video editing \\
 \bottomrule
@@ -355,3 +356,4 @@ Available: \url{https://github.com/olofk/serv}
 \end{thebibliography}
 
 \end{document}
+
