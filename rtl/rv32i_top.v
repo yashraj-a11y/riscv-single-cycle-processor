@@ -74,14 +74,14 @@ module rv32i_top #(
     );
 
     reg_file u_reg_file (
-        .clk        (clk),
-        .reg_write  (reg_write),
-        .rs1        (rs1),
-        .rs2        (rs2),
-        .rd         (rd),
-        .write_data (wb_data),
-        .read_data1 (rs1_data),
-        .read_data2 (rs2_data)
+        .clk (clk),
+        .we  (reg_write),
+        .rs1 (rs1),
+        .rs2 (rs2),
+        .rd  (rd),
+        .wd  (wb_data),
+        .rd1 (rs1_data),
+        .rd2 (rs2_data)
     );
 
     imm_gen u_imm_gen (
