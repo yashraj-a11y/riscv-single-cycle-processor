@@ -1,5 +1,7 @@
 # Demo video script (target 4:30, hard limit 5:00)
 
+**Demo Video Link:** [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1dDnBNzuqC1r42T4FfVivvBuUCRbZS9df)
+
 Record the screen with voice-over. Each person speaks over their own part. Put all five names on the title slide and have each person say their name when they start, so the "introduce all 5 members" requirement is clearly met.
 
 Before recording, have these open: the block diagram (`docs/datapath.png`), an editor with the `rtl/` folder, a terminal in the repo root, and GTKWave with `tb_rv32i_top.vcd` loaded and these signals added: `clk`, `dbg_pc`, `dbg_instr`, `dbg_alu_result`, `reg_write`, `mem_write`, `branch`, `pc_src`.
