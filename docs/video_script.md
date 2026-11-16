@@ -1,6 +1,6 @@
 # Demo video script (target 4:30, hard limit 5:00)
 
-**Demo Video Link:** [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1dDnBNzuqC1r42T4FfVivvBuUCRbZS9df)
+**Demo Video Link:** [Google Drive Video](https://drive.google.com/file/d/1IhI9AuI-NJyWOLgHf0MOzuwAFhSgHOxk/view?usp=sharing)
 
 Record the screen with voice-over. Each person speaks over their own part. Put all five names on the title slide and have each person say their name when they start, so the "introduce all 5 members" requirement is clearly met.
 

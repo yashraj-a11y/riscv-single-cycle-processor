@@ -28,5 +28,5 @@ Use clear commit messages, for example `Add ALU with zero flag` or `Add register
 
 - Names and roll numbers in `docs/report_phase1.tex` (author block and contributions table), then rebuild the PDF: `pdflatex report_phase1.tex` twice, inside `docs/`. Overleaf also works: upload `report_phase1.tex` and `datapath.pdf`.
 - Names in `README.md`.
-- Video link in `README.md` ([Google Drive Link](https://drive.google.com/drive/u/0/folders/1dDnBNzuqC1r42T4FfVivvBuUCRbZS9df)).
+- Video link in `README.md` ([Google Drive Link](https://drive.google.com/file/d/1IhI9AuI-NJyWOLgHf0MOzuwAFhSgHOxk/view?usp=sharing)).
 - One or two GTKWave screenshots for the video (and optionally the report).

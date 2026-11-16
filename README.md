@@ -8,7 +8,7 @@ CSA-222 Modern Computer Architecture, Project 1. A small single-cycle RISC-V pro
 
 **Phase I report:** [docs/report_phase1.pdf](docs/report_phase1.pdf)
 
-**Demo video:** [Google Drive Link](https://drive.google.com/drive/u/0/folders/1dDnBNzuqC1r42T4FfVivvBuUCRbZS9df)
+**Demo video:** [Google Drive Link](https://drive.google.com/file/d/1IhI9AuI-NJyWOLgHf0MOzuwAFhSgHOxk/view?usp=sharing)
 
 ![Datapath](docs/datapath.png)
 
