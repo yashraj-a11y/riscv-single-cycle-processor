@@ -1,0 +1,20 @@
+# synth_ecp5.ys - synthesize the processor for a Lattice ECP5 FPGA
+# Run from the repository root:   yosys -l synth/reports/yosys_ecp5.log synth/synth_ecp5.ys
+
+read_verilog rtl/pc.v rtl/adder.v rtl/mux2.v rtl/instr_mem.v rtl/control_unit.v
+read_verilog rtl/reg_file.v rtl/imm_gen.v rtl/alu_control.v rtl/alu.v rtl/data_mem.v
+read_verilog rtl/rv32i_top.v
+
+# Fill the instruction ROM with random words (see synth/rom_random.hex)
+chparam -set MEM_FILE "synth/rom_random.hex" rv32i_top
+
+# Keep the module hierarchy so resources can be reported per module
+synth_ecp5 -top rv32i_top -noflatten
+
+tee -o synth/reports/resources_per_module.txt stat
+
+# Flatten for place and route and write the netlist
+flatten
+opt_clean
+tee -o synth/reports/resources_total.txt stat
+write_json synth/reports/rv32i_top_ecp5.json

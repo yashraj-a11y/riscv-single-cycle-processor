@@ -1,0 +1,20 @@
+
+17. Printing statistics.
+
+=== rv32i_top ===
+
+   Number of wires:               2156
+   Number of wire bits:           4705
+   Number of public wires:        2156
+   Number of public wire bits:    4705
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2381
+     CCU2C                          64
+     L6MUX21                       390
+     LUT4                         1260
+     PFUMX                         571
+     TRELLIS_DPR16X4                64
+     TRELLIS_FF                     32
+

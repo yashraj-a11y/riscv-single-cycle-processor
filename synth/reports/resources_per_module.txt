@@ -1,0 +1,191 @@
+
+14. Printing statistics.
+
+=== $paramod$2d88f74dacdb4fb5039bc0b543b1395ac56329c6\instr_mem ===
+
+   Number of wires:                194
+   Number of wire bits:            256
+   Number of public wires:         194
+   Number of public wire bits:     256
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                224
+     L6MUX21                        32
+     LUT4                          128
+     PFUMX                          64
+
+=== adder ===
+
+   Number of wires:                  5
+   Number of wire bits:            160
+   Number of public wires:           5
+   Number of public wire bits:     160
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 16
+     CCU2C                          16
+
+=== alu ===
+
+   Number of wires:                528
+   Number of wire bits:            945
+   Number of public wires:         528
+   Number of public wire bits:     945
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                558
+     CCU2C                          32
+     L6MUX21                       103
+     LUT4                          283
+     PFUMX                         140
+
+=== alu_control ===
+
+   Number of wires:                 21
+   Number of wire bits:             26
+   Number of public wires:          21
+   Number of public wire bits:      26
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 19
+     L6MUX21                         3
+     LUT4                           11
+     PFUMX                           5
+
+=== control_unit ===
+
+   Number of wires:                 97
+   Number of wire bits:            104
+   Number of public wires:          97
+   Number of public wire bits:     104
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 97
+     L6MUX21                        19
+     LUT4                           52
+     PFUMX                          26
+
+=== data_mem ===
+
+   Number of wires:                231
+   Number of wire bits:            518
+   Number of public wires:         231
+   Number of public wire bits:     518
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                260
+     L6MUX21                        32
+     LUT4                          132
+     PFUMX                          64
+     TRELLIS_DPR16X4                32
+
+=== imm_gen ===
+
+   Number of wires:                 51
+   Number of wire bits:            131
+   Number of public wires:          51
+   Number of public wire bits:     131
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 62
+     L6MUX21                         8
+     LUT4                           40
+     PFUMX                          14
+
+=== mux2 ===
+
+   Number of wires:                  4
+   Number of wire bits:             97
+   Number of public wires:           4
+   Number of public wire bits:      97
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 32
+     LUT4                           32
+
+=== pc ===
+
+   Number of wires:                  4
+   Number of wire bits:             66
+   Number of public wires:           4
+   Number of public wire bits:      66
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 32
+     TRELLIS_FF                     32
+
+=== reg_file ===
+
+   Number of wires:                976
+   Number of wire bits:           1497
+   Number of public wires:         976
+   Number of public wire bits:    1497
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1000
+     L6MUX21                       193
+     LUT4                          517
+     PFUMX                         258
+     TRELLIS_DPR16X4                32
+
+=== rv32i_top ===
+
+   Number of wires:                 32
+   Number of wire bits:            551
+   Number of public wires:          32
+   Number of public wire bits:     551
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 14
+     $paramod$2d88f74dacdb4fb5039bc0b543b1395ac56329c6\instr_mem      1
+     LUT4                            1
+     adder                           2
+     alu                             1
+     alu_control                     1
+     control_unit                    1
+     data_mem                        1
+     imm_gen                         1
+     mux2                            3
+     pc                              1
+     reg_file                        1
+
+=== design hierarchy ===
+
+   rv32i_top                         1
+     $paramod$2d88f74dacdb4fb5039bc0b543b1395ac56329c6\instr_mem      1
+     adder                           2
+     alu                             1
+     alu_control                     1
+     control_unit                    1
+     data_mem                        1
+     imm_gen                         1
+     mux2                            3
+     pc                              1
+     reg_file                        1
+
+   Number of wires:               2156
+   Number of wire bits:           4705
+   Number of public wires:        2156
+   Number of public wire bits:    4705
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2381
+     CCU2C                          64
+     L6MUX21                       390
+     LUT4                         1260
+     PFUMX                         571
+     TRELLIS_DPR16X4                64
+     TRELLIS_FF                     32
+
