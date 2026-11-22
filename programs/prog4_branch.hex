@@ -1,0 +1,37 @@
+// prog4_branch.hex - machine code for prog4_branch.s (hand-assembled)
+// one 32-bit instruction per line, address = line index * 4
+fff00093   // 00: addi x1,  x0, -1
+fff00113   // 04: addi x2,  x0, -1
+00100193   // 08: addi x3,  x0, 1
+00208463   // 0c: beq  x1,  x2, +8       (taken)
+001f0f13   // 10: addi x30, x30, 1       (skipped)
+001f8f93   // 14: addi x31, x31, 1       check 1
+00209463   // 18: bne  x1,  x2, +8       (not taken)
+001f8f93   // 1c: addi x31, x31, 1       check 2
+00308463   // 20: beq  x1,  x3, +8       (not taken)
+001f8f93   // 24: addi x31, x31, 1       check 3
+00309663   // 28: bne  x1,  x3, +12      (taken)
+001f0f13   // 2c: addi x30, x30, 1       (skipped)
+001f0f13   // 30: addi x30, x30, 1       (skipped)
+001f8f93   // 34: addi x31, x31, 1       check 4
+00001463   // 38: bne  x0,  x0, +8       (never taken)
+001f8f93   // 3c: addi x31, x31, 1       check 5
+00000663   // 40: beq  x0,  x0, +12      (forward to fwd)
+001f8f93   // 44: addi x31, x31, 1       check 7  <- back
+00000663   // 48: beq  x0,  x0, +12      (forward to mul)
+001f8f93   // 4c: addi x31, x31, 1       check 6  <- fwd
+fe318ae3   // 50: beq  x3,  x3, -12      (backward to back)
+00600513   // 54: addi x10, x0, 6        <- mul
+00000613   // 58: addi x12, x0, 0
+00700593   // 5c: addi x11, x0, 7        <- outer
+00160613   // 60: addi x12, x12, 1       <- inner
+fff58593   // 64: addi x11, x11, -1
+fe059ce3   // 68: bne  x11, x0, -8       (back to inner)
+fff50513   // 6c: addi x10, x10, -1
+fe0516e3   // 70: bne  x10, x0, -20      (back to outer)
+00c02023   // 74: sw   x12, 0(x0)
+00002683   // 78: lw   x13, 0(x0)
+02a00713   // 7c: addi x14, x0, 42
+00e69463   // 80: bne  x13, x14, +8      (not taken)
+001f8f93   // 84: addi x31, x31, 1       check 8
+00000063   // 88: beq  x0,  x0, 0        (halt: branch to itself)
