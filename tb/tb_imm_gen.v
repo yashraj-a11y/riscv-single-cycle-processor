@@ -101,6 +101,38 @@ module tb_imm_gen;
         $display("--- default (unknown opcode) ---");
         check("R-type (0)   ", 32'h002081b3, 32'h00000000);  // R-type add
 
+        // ================================================================
+        // Phase II: immediates at the edges of each field
+        // ================================================================
+        $display("--- limits of each immediate field ---");
+
+        // addi x1, x0, 2047   =>  7ff00093   largest I-type immediate
+        check("addi +2047   ", 32'h7ff00093, 32'h000007FF);
+
+        // addi x2, x0, -2048  =>  80000113   smallest I-type immediate
+        check("addi -2048   ", 32'h80000113, 32'hFFFFF800);
+
+        // lw x7, -1(x8)       =>  fff42383   all immediate bits set
+        check("lw offset -1 ", 32'hfff42383, 32'hFFFFFFFF);
+
+        // sw x5, 2047(x6)     =>  7e532fa3   largest S-type immediate
+        check("sw +2047     ", 32'h7e532fa3, 32'h000007FF);
+
+        // sw x5, -2048(x6)    =>  80532023   smallest S-type immediate
+        check("sw -2048     ", 32'h80532023, 32'hFFFFF800);
+
+        // sw x7, -4(x16)      =>  fe782e23   negative S-type, split fields
+        check("sw -4        ", 32'hfe782e23, 32'hFFFFFFFC);
+
+        // beq x1, x2, +4094   =>  7e208fe3   farthest forward branch
+        check("beq +4094    ", 32'h7e208fe3, 32'h00000FFE);
+
+        // bne x1, x2, -4096   =>  80209063   farthest backward branch
+        check("bne -4096    ", 32'h80209063, 32'hFFFFF000);
+
+        // bne x10, x0, -20    =>  fe0516e3   used by the nested loop
+        check("bne -20      ", 32'hfe0516e3, 32'hFFFFFFEC);
+
         // ---- summary ----
         if (errors == 0) begin
             $display("tb_imm_gen: ALL TESTS PASSED");
