@@ -1,0 +1,574 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      1772/24288     7%
+Info:         logic LUTs:   1260/24288     5%
+Info:         carry LUTs:    128/24288     0%
+Info:           RAM LUTs:    256/ 3036     8%
+Info:          RAMW LUTs:    128/ 6072     2%
+
+Info:      Total DFFs:        32/24288     0%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     32 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0x4b10d9ca
+
+Info: Annotating ports with timing budgets for target frequency 25.00 MHz
+Info: Checksum: 0xb5a8d635
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:   130/  197    65%
+Info: 	                DCCA:     1/   56     1%
+Info: 	              DP16KD:     0/   56     0%
+Info: 	          MULT18X18D:     0/   28     0%
+Info: 	              ALU54B:     0/   14     0%
+Info: 	             EHXPLLL:     0/    2     0%
+Info: 	             EXTREFB:     0/    1     0%
+Info: 	                DCUA:     0/    1     0%
+Info: 	           PCSCLKDIV:     0/    2     0%
+Info: 	             IOLOGIC:     0/  128     0%
+Info: 	            SIOLOGIC:     0/   69     0%
+Info: 	                 GSR:     0/    1     0%
+Info: 	               JTAGG:     0/    1     0%
+Info: 	                OSCG:     0/    1     0%
+Info: 	               SEDGA:     0/    1     0%
+Info: 	                 DTR:     0/    1     0%
+Info: 	             USRMCLK:     0/    1     0%
+Info: 	             CLKDIVF:     0/    4     0%
+Info: 	           ECLKSYNCB:     0/   10     0%
+Info: 	             DLLDELD:     0/    8     0%
+Info: 	              DDRDLL:     0/    4     0%
+Info: 	             DQSBUFM:     0/    8     0%
+Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
+Info: 	        ECLKBRIDGECS:     0/    2     0%
+Info: 	                DCSC:     0/    2     0%
+Info: 	          TRELLIS_FF:    32/24288     0%
+Info: 	        TRELLIS_COMB:  1790/24288     7%
+Info: 	        TRELLIS_RAMW:    64/ 3036     2%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 369 cells, random placement wirelen = 38448.
+Info:     at initial placer iter 0, wirelen = 7985
+Info:     at initial placer iter 1, wirelen = 6191
+Info:     at initial placer iter 2, wirelen = 6072
+Info:     at initial placer iter 3, wirelen = 6010
+Info: Running main analytical placer, max placement attempts per cell = 508536.
+Info:     at iteration #1, type TRELLIS_COMB: wirelen solved = 6049, spread = 11132, legal = 11215; time = 0.05s
+Info:     at iteration #2, type TRELLIS_COMB: wirelen solved = 6488, spread = 9856, legal = 10011; time = 0.05s
+Info:     at iteration #3, type TRELLIS_COMB: wirelen solved = 6634, spread = 9593, legal = 9727; time = 0.04s
+Info:     at iteration #4, type TRELLIS_COMB: wirelen solved = 6740, spread = 9674, legal = 9738; time = 0.04s
+Info:     at iteration #5, type TRELLIS_COMB: wirelen solved = 6757, spread = 9410, legal = 9478; time = 0.04s
+Info:     at iteration #6, type TRELLIS_COMB: wirelen solved = 6803, spread = 9264, legal = 9377; time = 0.04s
+Info:     at iteration #7, type TRELLIS_COMB: wirelen solved = 6897, spread = 9222, legal = 9338; time = 0.05s
+Info:     at iteration #8, type TRELLIS_COMB: wirelen solved = 6988, spread = 9439, legal = 9544; time = 0.04s
+Info:     at iteration #9, type TRELLIS_COMB: wirelen solved = 7178, spread = 9485, legal = 9662; time = 0.04s
+Info:     at iteration #10, type TRELLIS_COMB: wirelen solved = 7161, spread = 9202, legal = 9403; time = 0.05s
+Info:     at iteration #11, type TRELLIS_COMB: wirelen solved = 7231, spread = 9240, legal = 9351; time = 0.05s
+Info:     at iteration #12, type TRELLIS_COMB: wirelen solved = 7258, spread = 9118, legal = 9283; time = 0.05s
+Info:     at iteration #13, type TRELLIS_COMB: wirelen solved = 7252, spread = 9219, legal = 9364; time = 0.05s
+Info:     at iteration #14, type TRELLIS_COMB: wirelen solved = 7322, spread = 9285, legal = 9398; time = 0.08s
+Info:     at iteration #15, type TRELLIS_COMB: wirelen solved = 7403, spread = 9178, legal = 9277; time = 0.06s
+Info:     at iteration #16, type TRELLIS_COMB: wirelen solved = 7454, spread = 9192, legal = 9263; time = 0.06s
+Info: HeAP Placer Time: 1.18s
+Info:   of which solving equations: 0.81s
+Info:   of which spreading cells: 0.05s
+Info:   of which strict legalisation: 0.03s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 3145, wirelen = 9263
+Info:   at iteration #5: temp = 0.000000, timing cost = 2195, wirelen = 8020
+Info:   at iteration #10: temp = 0.000000, timing cost = 1810, wirelen = 7874
+Info:   at iteration #12: temp = 0.000000, timing cost = 1699, wirelen = 7850 
+Info: SA placement time 2.66s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 38.08 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 3.66 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 31.62 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 4 endpoint(s)
+Info:          + represents [1,4) endpoint(s)
+Info: [  8376,   9865) |+
+Info: [  9865,  11354) |+
+Info: [ 11354,  12843) |+
+Info: [ 12843,  14332) |**+
+Info: [ 14332,  15821) |******+
+Info: [ 15821,  17310) |***+
+Info: [ 17310,  18799) |****************+
+Info: [ 18799,  20288) |******************+
+Info: [ 20288,  21777) |****************+
+Info: [ 21777,  23266) |****************************+
+Info: [ 23266,  24755) |************************************************************ 
+Info: [ 24755,  26244) |****************************** 
+Info: [ 26244,  27733) |*+
+Info: [ 27733,  29222) |*************** 
+Info: [ 29222,  30711) |*******************+
+Info: [ 30711,  32200) |*********************+
+Info: [ 32200,  33689) |***************************************************+
+Info: [ 33689,  35178) |***************************************************+
+Info: [ 35178,  36667) |*************+
+Info: [ 36667,  38156) |*******+
+Info: Checksum: 0x17ed33d2
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 7139 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      431        568 |  431   568 |      6733|       0.31       0.31|
+Info:       2000 |      751       1248 |  320   680 |      6202|       0.20       0.50|
+Info:       3000 |     1075       1924 |  324   676 |      5656|       0.17       0.67|
+Info:       4000 |     1451       2548 |  376   624 |      5287|       0.19       0.86|
+Info:       5000 |     1907       3092 |  456   544 |      4866|       0.18       1.04|
+Info:       6000 |     2327       3672 |  420   580 |      4398|       0.20       1.24|
+Info:       7000 |     2769       4230 |  442   558 |      3951|       0.20       1.44|
+Info:       8000 |     3215       4784 |  446   554 |      3612|       0.19       1.63|
+Info:       9000 |     3754       5245 |  539   461 |      3283|       0.19       1.82|
+Info:      10000 |     4193       5806 |  439   561 |      2830|       0.17       1.99|
+Info:      11000 |     4309       6524 |  116   718 |      1979|       0.08       2.07|
+Info:      12000 |     4418       7282 |  109   758 |      1117|       0.06       2.12|
+Info:      13000 |     4458       8013 |   40   731 |       183|       0.14       2.26|
+Info:      13218 |     4474       8101 |   16    88 |         0|       0.07       2.33|
+Info: Routing complete.
+Info: Router1 time 2.33s
+Info: Checksum: 0xb00ba9c9
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info: curr total
+Info:  0.5  0.5  Source u_pc.pc_TRELLIS_FF_Q_25.Q
+Info:  1.4  1.9    Net dbg_pc[6]$TRELLIS_IO_OUT budget 0.915000 ns (5,12) -> (7,14)
+Info:                Sink u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_ALUT_LUT4_Z.B
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:59.11-63.6
+Info:                  rtl/adder.v:8.24-8.25
+Info:  0.2  2.1  Source u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_ALUT_LUT4_Z.F
+Info:  0.0  2.1    Net u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_ALUT budget 0.914000 ns (7,14) -> (7,14)
+Info:                Sink u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:54.38-57.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.22-141.24
+Info:  0.2  2.3  Source u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0  2.3    Net u_instr_mem.instr_L6MUX21_Z_8_D0 budget 0.000000 ns (7,14) -> (7,14)
+Info:                Sink u_instr_mem.instr_L6MUX21_Z_8_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:54.38-57.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.34-141.36
+Info:  0.2  2.5  Source u_instr_mem.instr_L6MUX21_Z_8_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.5  4.1    Net dbg_instr[23]$TRELLIS_IO_OUT budget 1.828000 ns (7,14) -> (6,18)
+Info:                Sink u_reg_file.regs.0.8$DPRAM_COMB2.A
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  rtl/reg_file.v:12.24-12.27
+Info:  0.2  4.3  Source u_reg_file.regs.0.8$DPRAM_COMB2.F
+Info:  0.7  5.0    Net u_reg_file.regs.0.0_DO_1[4] budget 1.828000 ns (6,18) -> (5,18)
+Info:                Sink u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.3  5.2  Source u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0  5.2    Net u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1 budget 0.000000 ns (5,18) -> (5,18)
+Info:                Sink u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.62-157.64
+Info:  0.2  5.5  Source u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  0.0  5.5    Net u_reg_file.rd2_L6MUX21_Z_29_D1 budget 0.000000 ns (5,18) -> (5,18)
+Info:                Sink u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.70-157.72
+Info:  0.2  5.7  Source u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.4  7.2    Net rs2_data[2] budget 2.742000 ns (5,18) -> (7,10)
+Info:                Sink u_alu_src_mux.y_LUT4_Z_29.C
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  rtl/reg_file.v:16.24-16.27
+Info:  0.2  7.4  Source u_alu_src_mux.y_LUT4_Z_29.F
+Info:  1.4  8.8    Net alu_b[2] budget 2.399000 ns (7,10) -> (10,8)
+Info:                Sink u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.B
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:101.10-106.6
+Info:                  rtl/mux2.v:13.24-13.25
+Info:  0.4  9.2  Source u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.2    Net u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (10,8) -> (10,8)
+Info:                Sink u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.2  Source u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.2    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[4] budget 0.000000 ns (10,8) -> (10,8)
+Info:                Sink u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.3  Source u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.3    Net u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (10,8) -> (10,8)
+Info:                Sink u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.3  Source u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.3    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[6] budget 0.000000 ns (10,8) -> (11,8)
+Info:                Sink u_alu.result_L6MUX21_Z_25_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.4  Source u_alu.result_L6MUX21_Z_25_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.4    Net u_alu.result_L6MUX21_Z_25_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (11,8) -> (11,8)
+Info:                Sink u_alu.result_L6MUX21_Z_25_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.4  Source u_alu.result_L6MUX21_Z_25_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.4    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[8] budget 0.000000 ns (11,8) -> (11,8)
+Info:                Sink u_alu.result_L6MUX21_Z_23_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.5  Source u_alu.result_L6MUX21_Z_23_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.5    Net u_alu.result_L6MUX21_Z_23_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (11,8) -> (11,8)
+Info:                Sink u_alu.result_L6MUX21_Z_23_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.5  Source u_alu.result_L6MUX21_Z_23_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.5    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[10] budget 0.000000 ns (11,8) -> (11,8)
+Info:                Sink u_alu.result_L6MUX21_Z_21_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.5  Source u_alu.result_L6MUX21_Z_21_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.5    Net u_alu.result_L6MUX21_Z_21_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (11,8) -> (11,8)
+Info:                Sink u_alu.result_L6MUX21_Z_21_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.5  Source u_alu.result_L6MUX21_Z_21_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.5    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[12] budget 0.000000 ns (11,8) -> (11,8)
+Info:                Sink u_alu.result_L6MUX21_Z_19_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.6  Source u_alu.result_L6MUX21_Z_19_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.6    Net u_alu.result_L6MUX21_Z_19_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (11,8) -> (11,8)
+Info:                Sink u_alu.result_L6MUX21_Z_19_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.6  Source u_alu.result_L6MUX21_Z_19_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.6    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[14] budget 0.000000 ns (11,8) -> (12,8)
+Info:                Sink u_alu.result_L6MUX21_Z_17_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.7  Source u_alu.result_L6MUX21_Z_17_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.7    Net u_alu.result_L6MUX21_Z_17_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (12,8) -> (12,8)
+Info:                Sink u_alu.result_L6MUX21_Z_17_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.7  Source u_alu.result_L6MUX21_Z_17_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.7    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[16] budget 0.000000 ns (12,8) -> (12,8)
+Info:                Sink u_alu.result_L6MUX21_Z_15_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.7  Source u_alu.result_L6MUX21_Z_15_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.7    Net u_alu.result_L6MUX21_Z_15_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (12,8) -> (12,8)
+Info:                Sink u_alu.result_L6MUX21_Z_15_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.7  Source u_alu.result_L6MUX21_Z_15_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.7    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[18] budget 0.000000 ns (12,8) -> (12,8)
+Info:                Sink u_alu.result_L6MUX21_Z_13_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.8  Source u_alu.result_L6MUX21_Z_13_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.8    Net u_alu.result_L6MUX21_Z_13_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (12,8) -> (12,8)
+Info:                Sink u_alu.result_L6MUX21_Z_13_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.8  Source u_alu.result_L6MUX21_Z_13_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.8    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[20] budget 0.000000 ns (12,8) -> (12,8)
+Info:                Sink u_alu.result_L6MUX21_Z_11_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.9  Source u_alu.result_L6MUX21_Z_11_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.9    Net u_alu.result_L6MUX21_Z_11_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (12,8) -> (12,8)
+Info:                Sink u_alu.result_L6MUX21_Z_11_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.9  Source u_alu.result_L6MUX21_Z_11_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.9    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[22] budget 0.000000 ns (12,8) -> (13,8)
+Info:                Sink u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1 10.0  Source u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0 10.0    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (13,8) -> (13,8)
+Info:                Sink u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0 10.0  Source u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0 10.0    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[24] budget 0.000000 ns (13,8) -> (13,8)
+Info:                Sink u_alu.result_L6MUX21_Z_7_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1 10.0  Source u_alu.result_L6MUX21_Z_7_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0 10.0    Net u_alu.result_L6MUX21_Z_7_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (13,8) -> (13,8)
+Info:                Sink u_alu.result_L6MUX21_Z_7_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0 10.0  Source u_alu.result_L6MUX21_Z_7_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0 10.0    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[26] budget 0.000000 ns (13,8) -> (13,8)
+Info:                Sink u_alu.result_L6MUX21_Z_5_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1 10.1  Source u_alu.result_L6MUX21_Z_5_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0 10.1    Net u_alu.result_L6MUX21_Z_5_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (13,8) -> (13,8)
+Info:                Sink u_alu.result_L6MUX21_Z_5_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0 10.1  Source u_alu.result_L6MUX21_Z_5_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0 10.1    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[28] budget 0.000000 ns (13,8) -> (13,8)
+Info:                Sink u_alu.result_L6MUX21_Z_3_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1 10.2  Source u_alu.result_L6MUX21_Z_3_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0 10.2    Net u_alu.result_L6MUX21_Z_3_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (13,8) -> (13,8)
+Info:                Sink u_alu.result_L6MUX21_Z_3_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.4 10.6  Source u_alu.result_L6MUX21_Z_3_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.F
+Info:  0.9 11.5    Net u_alu.result_L6MUX21_Z_2_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D[1] budget 2.399000 ns (13,8) -> (13,7)
+Info:                Sink u_alu.result_L6MUX21_Z_2_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z.D
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.4 11.9  Source u_alu.result_L6MUX21_Z_2_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0 11.9    Net u_alu.result_L6MUX21_Z_2_D0_L6MUX21_Z_D0 budget 0.000000 ns (13,7) -> (13,7)
+Info:                Sink u_alu.result_L6MUX21_Z_2_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.50-157.52
+Info:  0.2 12.1  Source u_alu.result_L6MUX21_Z_2_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  0.0 12.1    Net u_alu.result_L6MUX21_Z_2_D0 budget 0.000000 ns (13,7) -> (13,7)
+Info:                Sink u_alu.result_L6MUX21_Z_2_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.66-157.68
+Info:  0.2 12.4  Source u_alu.result_L6MUX21_Z_2_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.0 13.4    Net alu_result[29] budget 2.879000 ns (13,7) -> (15,11)
+Info:                Sink u_alu.zero_L6MUX21_Z_SD_L6MUX21_Z_2_D0_PFUMX_Z_BLUT_LUT4_Z.D
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:144.10-149.6
+Info:                  rtl/mux2.v:10.24-10.26
+Info:  0.4 13.8  Source u_alu.zero_L6MUX21_Z_SD_L6MUX21_Z_2_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0 13.8    Net u_alu.zero_L6MUX21_Z_SD_L6MUX21_Z_2_D0 budget 0.000000 ns (15,11) -> (15,11)
+Info:                Sink u_alu.zero_L6MUX21_Z_SD_L6MUX21_Z_2_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.34-141.36
+Info:  0.2 14.0  Source u_alu.zero_L6MUX21_Z_SD_L6MUX21_Z_2_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.0 15.0    Net u_alu.zero_L6MUX21_Z_SD[3] budget 2.878000 ns (15,11) -> (14,6)
+Info:                Sink u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.D
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.2 15.3  Source u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.F
+Info:  0.0 15.3    Net u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT budget 2.878000 ns (14,6) -> (14,6)
+Info:                Sink u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.46-157.48
+Info:  0.2 15.4  Source u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0 15.4    Net u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D1 budget 0.000000 ns (14,6) -> (14,6)
+Info:                Sink u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.62-157.64
+Info:  0.2 15.7  Source u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  0.0 15.7    Net u_alu.zero_L6MUX21_Z_D1 budget 0.000000 ns (14,6) -> (14,6)
+Info:                Sink u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.70-157.72
+Info:  0.2 15.9  Source u_alu.zero_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.1 17.0    Net zero budget 3.289000 ns (14,6) -> (7,6)
+Info:                Sink pc_src_LUT4_Z.B
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:31.17-31.21
+Info:  0.2 17.3  Source pc_src_LUT4_Z.F
+Info:  1.3 18.6    Net pc_src budget 3.289000 ns (7,6) -> (6,11)
+Info:                Sink u_pc_mux.y_LUT4_Z_29.D
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:127.10-132.6
+Info:                  rtl/mux2.v:12.24-12.27
+Info:  0.2 18.8  Source u_pc_mux.y_LUT4_Z_29.F
+Info:  0.1 18.9    Net pc_next[2] budget 3.289000 ns (6,11) -> (6,11)
+Info:                Sink u_pc.pc_TRELLIS_FF_Q_29.DI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:127.10-132.6
+Info:                  rtl/mux2.v:13.24-13.25
+Info:  0.0 18.9  Setup u_pc.pc_TRELLIS_FF_Q_29.DI
+Info: 7.0 ns logic, 11.9 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info: curr total
+Info:  0.0  0.0  Source reset$tr_io.O
+Info:  1.9  1.9    Net reset$TRELLIS_IO_IN budget 39.576000 ns (0,11) -> (7,4)
+Info:                Sink u_pc.pc_TRELLIS_FF_Q_5.LSR
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:47.8-52.6
+Info:                  rtl/pc.v:10.24-10.29
+Info:  0.4  2.4  Setup u_pc.pc_TRELLIS_FF_Q_5.LSR
+Info: 0.4 ns logic, 1.9 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source u_pc.pc_TRELLIS_FF_Q_25.Q
+Info:  1.4  1.9    Net dbg_pc[6]$TRELLIS_IO_OUT budget 0.915000 ns (5,12) -> (7,14)
+Info:                Sink u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_ALUT_LUT4_Z.B
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:59.11-63.6
+Info:                  rtl/adder.v:8.24-8.25
+Info:  0.2  2.1  Source u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_ALUT_LUT4_Z.F
+Info:  0.0  2.1    Net u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_ALUT budget 0.914000 ns (7,14) -> (7,14)
+Info:                Sink u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:54.38-57.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.22-141.24
+Info:  0.2  2.3  Source u_instr_mem.instr_L6MUX21_Z_8_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0  2.3    Net u_instr_mem.instr_L6MUX21_Z_8_D0 budget 0.000000 ns (7,14) -> (7,14)
+Info:                Sink u_instr_mem.instr_L6MUX21_Z_8_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:54.38-57.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.34-141.36
+Info:  0.2  2.5  Source u_instr_mem.instr_L6MUX21_Z_8_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.5  4.1    Net dbg_instr[23]$TRELLIS_IO_OUT budget 1.828000 ns (7,14) -> (6,18)
+Info:                Sink u_reg_file.regs.0.8$DPRAM_COMB2.A
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  rtl/reg_file.v:12.24-12.27
+Info:  0.2  4.3  Source u_reg_file.regs.0.8$DPRAM_COMB2.F
+Info:  0.7  5.0    Net u_reg_file.regs.0.0_DO_1[4] budget 1.828000 ns (6,18) -> (5,18)
+Info:                Sink u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.3  5.2  Source u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0  5.2    Net u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1 budget 0.000000 ns (5,18) -> (5,18)
+Info:                Sink u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.62-157.64
+Info:  0.2  5.5  Source u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  0.0  5.5    Net u_reg_file.rd2_L6MUX21_Z_29_D1 budget 0.000000 ns (5,18) -> (5,18)
+Info:                Sink u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.70-157.72
+Info:  0.2  5.7  Source u_reg_file.rd2_L6MUX21_Z_29_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.4  7.2    Net rs2_data[2] budget 2.742000 ns (5,18) -> (7,10)
+Info:                Sink u_alu_src_mux.y_LUT4_Z_29.C
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:76.14-85.6
+Info:                  rtl/reg_file.v:16.24-16.27
+Info:  0.2  7.4  Source u_alu_src_mux.y_LUT4_Z_29.F
+Info:  1.4  8.8    Net alu_b[2] budget 2.399000 ns (7,10) -> (10,8)
+Info:                Sink u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.B
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:101.10-106.6
+Info:                  rtl/mux2.v:13.24-13.25
+Info:  0.4  9.2  Source u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.2    Net u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (10,8) -> (10,8)
+Info:                Sink u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.0  9.2  Source u_alu.result_L6MUX21_Z_29_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCO
+Info:  0.0  9.2    Net u_alu.result_L6MUX21_Z_9_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1_COUT[4] budget 0.000000 ns (10,8) -> (10,8)
+Info:                Sink u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:38.23-38.25
+Info:                  rtl/alu.v:32.31-32.36
+Info:  0.1  9.3  Source u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB0.FCO
+Info:  0.0  9.3    Net u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_FCI_INT budget 0.000000 ns (10,8) -> (10,8)
+Info:                Sink u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.FCI
+Info:  0.4  9.7  Source u_alu.result_L6MUX21_Z_27_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D_CCU2C_S0_1$CCU2_COMB1.F
+Info:  0.9 10.6    Net u_alu.result_L6MUX21_Z_26_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_D[1] budget 2.522000 ns (10,8) -> (10,6)
+Info:                Sink u_alu.result_L6MUX21_Z_26_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z.D
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.4 11.0  Source u_alu.result_L6MUX21_Z_26_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0 11.0    Net u_alu.result_L6MUX21_Z_26_D0_L6MUX21_Z_D0 budget 0.000000 ns (10,6) -> (10,6)
+Info:                Sink u_alu.result_L6MUX21_Z_26_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.50-157.52
+Info:  0.2 11.3  Source u_alu.result_L6MUX21_Z_26_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  0.0 11.3    Net u_alu.result_L6MUX21_Z_26_D0 budget 0.000000 ns (10,6) -> (10,6)
+Info:                Sink u_alu.result_L6MUX21_Z_26_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:108.9-114.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:157.66-157.68
+Info:  0.2 11.5  Source u_alu.result_L6MUX21_Z_26_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  2.0 13.5    Net alu_result[5] budget 3.030000 ns (10,6) -> (6,14)
+Info:                Sink u_data_mem.mem.0.24$DPRAM_COMB3.A
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:144.10-149.6
+Info:                  rtl/mux2.v:10.24-10.26
+Info:  0.2 13.8  Source u_data_mem.mem.0.24$DPRAM_COMB3.F
+Info:  0.9 14.7    Net u_data_mem.mem.0.0_DO[0] budget 3.030000 ns (6,14) -> (5,16)
+Info:                Sink u_data_mem.read_data_L6MUX21_Z_28_D1_PFUMX_Z_ALUT_LUT4_Z.D
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:135.14-141.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.2 14.9  Source u_data_mem.read_data_L6MUX21_Z_28_D1_PFUMX_Z_ALUT_LUT4_Z.F
+Info:  0.0 14.9    Net u_data_mem.read_data_L6MUX21_Z_28_D1_PFUMX_Z_ALUT budget 3.030000 ns (5,16) -> (5,16)
+Info:                Sink u_data_mem.read_data_L6MUX21_Z_28_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:135.14-141.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.30-141.32
+Info:  0.2 15.1  Source u_data_mem.read_data_L6MUX21_Z_28_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  0.0 15.1    Net u_data_mem.read_data_L6MUX21_Z_28_D1 budget 0.000000 ns (5,16) -> (5,16)
+Info:                Sink u_data_mem.read_data_L6MUX21_Z_28_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:135.14-141.6
+Info:                  /usr/bin/../share/yosys/ecp5/cells_map.v:141.38-141.40
+Info:  0.2 15.4  Source u_data_mem.read_data_L6MUX21_Z_28_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:  1.1 16.4    Net mem_read_data[3] budget 3.463000 ns (5,16) -> (6,15)
+Info:                Sink u_wb_mux.y_LUT4_Z_28.B
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:144.10-149.6
+Info:                  rtl/mux2.v:11.24-11.26
+Info:  0.2 16.7  Source u_wb_mux.y_LUT4_Z_28.F
+Info:  5.1 21.8    Net dbg_write_data[3]$TRELLIS_IO_OUT budget 3.848000 ns (6,15) -> (72,32)
+Info:                Sink dbg_write_data[3]$tr_io.I
+Info:                Defined in:
+Info:                  rtl/rv32i_top.v:30.17-30.24
+Info: 5.3 ns logic, 16.5 ns routing
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 52.81 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 2.37 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 21.75 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 7 endpoint(s)
+Info:          + represents [1,7) endpoint(s)
+Info: [ 18250,  19262) |+
+Info: [ 19262,  20274) |+
+Info: [ 20274,  21286) |*+
+Info: [ 21286,  22298) |******+
+Info: [ 22298,  23310) |*************+
+Info: [ 23310,  24322) |***+
+Info: [ 24322,  25334) |**+
+Info: [ 25334,  26346) |****************+
+Info: [ 26346,  27358) |****************************************+
+Info: [ 27358,  28370) |***************************+
+Info: [ 28370,  29382) | 
+Info: [ 29382,  30394) | 
+Info: [ 30394,  31406) | 
+Info: [ 31406,  32418) |***********+
+Info: [ 32418,  33430) |**********************+
+Info: [ 33430,  34442) |*+
+Info: [ 34442,  35454) |******+
+Info: [ 35454,  36466) |************************************************************ 
+Info: [ 36466,  37478) |****+
+Info: [ 37478,  38490) |******+
+
+Info: Program finished normally.
