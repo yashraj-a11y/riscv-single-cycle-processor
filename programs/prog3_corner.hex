@@ -1,0 +1,32 @@
+// prog3_corner.hex - machine code for prog3_corner.s (hand-assembled)
+// one 32-bit instruction per line, address = line index * 4
+7ff00093   // 00: addi x1,  x0, 2047
+80000113   // 04: addi x2,  x0, -2048
+002081b3   // 08: add  x3,  x1, x2
+00500013   // 0c: addi x0,  x0, 5        (write to x0)
+00108033   // 10: add  x0,  x1, x1       (write to x0)
+00000233   // 14: add  x4,  x0, x0
+00100293   // 18: addi x5,  x0, 1
+01f00313   // 1c: addi x6,  x0, 31
+005282b3   // 20: add  x5,  x5, x5       <- dbl
+fff30313   // 24: addi x6,  x6, -1
+fe031ce3   // 28: bne  x6,  x0, -8       (back to dbl)
+fff28393   // 2c: addi x7,  x5, -1
+00138413   // 30: addi x8,  x7, 1
+003184b3   // 34: add  x9,  x3, x3
+40500533   // 38: sub  x10, x0, x5
+401105b3   // 3c: sub  x11, x2, x1
+0073c633   // 40: xor  x12, x7, x7
+0053f6b3   // 44: and  x13, x7, x5
+0053e733   // 48: or   x14, x7, x5
+0071c7b3   // 4c: xor  x15, x3, x7
+01000813   // 50: addi x16, x0, 16
+fe782e23   // 54: sw   x7,  -4(x16)
+ffc82883   // 58: lw   x17, -4(x16)
+0e502e23   // 5c: sw   x5,  252(x0)
+0fc02903   // 60: lw   x18, 252(x0)
+0e382623   // 64: sw   x3,  236(x16)
+0fc02983   // 68: lw   x19, 252(x0)
+0fc02003   // 6c: lw   x0,  252(x0)      (load into x0)
+00000a33   // 70: add  x20, x0, x0
+00000063   // 74: beq  x0,  x0, 0        (halt: branch to itself)
