@@ -89,9 +89,31 @@ module tb_alu;
         // ADDI with a negative immediate has instr[30] = 1; must still be ADD
         check_ctrl("ADDI neg ", 2'b10, 3'b000, 1'b1, 1'b0, ADD);
 
-        if (errors == 0) $display("tb_alu: ALL TESTS PASSED");
-        else             $display("tb_alu: %0d TEST(S) FAILED", errors);
-        $finish;
+        // Phase II: values at the edges of the 32-bit range
+        $display("--- ALU corner cases ---");
+        check_alu("ADD", ADD, 32'h7FFFFFFF,  32'd1,         32'h80000000,  1'b0); // signed overflow
+        check_alu("ADD", ADD, 32'h80000000,  32'h80000000,  32'h00000000,  1'b1); // wraps to zero
+        check_alu("ADD", ADD, 32'hFFFFFFFF,  32'hFFFFFFFF,  32'hFFFFFFFE,  1'b0); // -1 + -1
+        check_alu("ADD", ADD, 32'd0,         32'd0,         32'd0,         1'b1);
+        check_alu("SUB", SUB, 32'd0,         32'h80000000,  32'h80000000,  1'b0); // negate most negative
+        check_alu("SUB", SUB, 32'h80000000,  32'd1,         32'h7FFFFFFF,  1'b0); // signed underflow
+        check_alu("SUB", SUB, 32'd0,         32'd1,         32'hFFFFFFFF,  1'b0); // borrow through all bits
+        check_alu("SUB", SUB, 32'hFFFFFFFF,  32'hFFFFFFFF,  32'd0,         1'b1); // equal negatives
+        check_alu("SUB", SUB, 32'h80000000,  32'h00000000,  32'h80000000,  1'b0); // differ only in bit 31
+        check_alu("AND", AND, 32'hFFFFFFFF,  32'hFFFFFFFF,  32'hFFFFFFFF,  1'b0);
+        check_alu("AND", AND, 32'h12345678,  32'd0,         32'd0,         1'b1);
+        check_alu("OR ", OR,  32'd0,         32'd0,         32'd0,         1'b1);
+        check_alu("OR ", OR,  32'h7FFFFFFF,  32'h80000000,  32'hFFFFFFFF,  1'b0);
+        check_alu("XOR", XOR, 32'hFFFFFFFF,  32'h7FFFFFFF,  32'h80000000,  1'b0);
+        check_alu("XOR", XOR, 32'hAAAAAAAA,  32'h55555555,  32'hFFFFFFFF,  1'b0);
+
+        if (errors == 0) begin
+            $display("tb_alu: ALL TESTS PASSED");
+            $finish;
+        end else begin
+            $display("tb_alu: %0d TEST(S) FAILED", errors);
+            $fatal(1);
+        end
     end
 
 endmodule
