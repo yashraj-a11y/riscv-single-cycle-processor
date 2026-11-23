@@ -5,3 +5,6 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+synth/reports/*.json
+synth/reports/yosys_ecp5.log
+wave.png
