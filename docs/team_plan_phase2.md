@@ -25,6 +25,6 @@ Run `make` before every push and check that every testbench prints `ALL TESTS PA
 
 ## Before submitting
 
-- Yash Yadav and Yash Raj have the same roll number (2401010514) in the report and README. One of them is a typo; fix it in `docs/report_final.tex` and `README.md`, then rebuild the PDF.
+- Yash Yadav (2401010515) and Yash Raj (2401010514) roll numbers verified and updated in report and README.
 - Everyone reads the whole final report once. The interview can ask about any part of the project, not only your own.
 - If the instructor has a board, `fpga/fpga_top.v` needs only a constraint file for that board. If you do run it, add a photo or short clip and update the "FPGA deployment" paragraph in the report, which currently says the design was not run on hardware.

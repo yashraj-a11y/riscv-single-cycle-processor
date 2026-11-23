@@ -4,7 +4,7 @@ CSA-222 Modern Computer Architecture, Project 1. A small single-cycle RISC-V pro
 
 `ADD` `SUB` `AND` `OR` `XOR` `ADDI` `LW` `SW` `BEQ` `BNE`
 
-**Team:** Rishi Raj (2401010380), Yash Yadav (2401010514), Aditya Samadhiya (2401010037), Kaustubh Ranjan Mishra (2401020116), Yash Raj (2401010514)
+**Team:** Rishi Raj (2401010380), Yash Yadav (2401010515), Aditya Samadhiya (2401010037), Kaustubh Ranjan Mishra (2401020116), Yash Raj (2401010514)
 
 **Final report:** [docs/report_final.pdf](docs/report_final.pdf) (Phase I report: [docs/report_phase1.pdf](docs/report_phase1.pdf))
 
@@ -126,7 +126,7 @@ We did not have a board, so this is untested on hardware. `fpga/fpga_top.v` is a
 | Member | Phase I | Phase II |
 |---|---|---|
 | Rishi Raj (2401010380) | `pc`, `adder`, `instr_mem`, `tb_fetch`, programs 1 and 2 | Programs 3 and 4, instruction memory fix for synthesis |
-| Yash Yadav (2401010514) | `reg_file`, `imm_gen`, `tb_reg_file`, `tb_imm_gen` | Immediate limit tests, waveform capture script and figures |
+| Yash Yadav (2401010515) | `reg_file`, `imm_gen`, `tb_reg_file`, `tb_imm_gen` | Immediate limit tests, waveform capture script and figures |
 | Aditya Samadhiya (2401010037) | `alu`, `alu_control`, `tb_alu`, block diagram | ALU corner-case tests, synthesis script and resource report |
 | Kaustubh Ranjan Mishra (2401020116) | `control_unit`, `mux2`, `tb_control_unit` | Place and route, critical path and clock frequency analysis |
 | Yash Raj (2401010514) | `data_mem`, `rv32i_top`, `tb_data_mem`, `tb_rv32i_top`, Makefile | Four-program top-level testbench, FPGA wrapper, build flow, final report |
