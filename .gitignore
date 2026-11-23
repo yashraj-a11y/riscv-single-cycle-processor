@@ -8,3 +8,5 @@
 synth/reports/*.json
 synth/reports/yosys_ecp5.log
 wave.png
+docs/team_plan*.md
+docs/video_script.md
